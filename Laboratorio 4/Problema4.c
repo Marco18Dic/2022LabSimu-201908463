@@ -121,6 +121,7 @@ void main()
             double Det = A[0][0]*(A[1][1]*A[2][2]-A[1][2]*A[2][1])-A[0][1]*(A[1][0]*A[2][2]-A[1][2]*A[2][0])+A[0][2]*(A[1][0]*A[2][1]-A[1][1]*A[2][0]);
             printf("\nEl determinande de la matriz A es: %.2lf\n",Det);  
         }
+        //si presiona f, calcula la traspuesta de la matriz B
         else if (seleccion=='f')
         {
             for (int i = 0; i < n; i++)
@@ -128,6 +129,9 @@ void main()
                 printf("[%.2lf    %.2lf   %.2lf]\n",B[0][i],B[1][i],B[2][i]);
             }
         }
+        //si presiona g, calcula la inversa de la matriz Z
+        //para esto estoy usando la fórmula de la adjunta traspuesta
+        //dividido el determinante
         else if (seleccion=='g')
         {
             C[0][0]=A[1][1]*A[2][2]-A[1][2]*A[2][1];
@@ -149,6 +153,7 @@ void main()
                 printf("[%.2lf    %.2lf   %.2lf]\n",C[i][0],C[i][1],C[i][2]);
             }
         }
+        //si presiona h, hace la reducción de Gauss a la matriz A
         else if (seleccion=='h')
         {
             int aux1=A[1][0];
@@ -166,6 +171,7 @@ void main()
                 printf("[%.2lf    %.2lf   %.2lf]\n",C[i][0],C[i][1],C[i][2]);
             }
         }
+        //si presiona i, hace la reducción de Gauss-Jordan de la matriz B
         else if (seleccion=='i')
         {
             for (int i = 0; i < n; i++)
